@@ -4,34 +4,21 @@ import urllib.parse
 import pafy
 from random import *
 
-import math
 import flet
 from flet import (
     Page,
     padding,
     TextField,
-    FloatingActionButton,
     Column,
     Icon,
     AppBar,
     Row,
     Text,
     IconButton,
-    OutlinedButton,
-    Tabs,
     Image,
     border_radius,
-    Tab,
-    Alignment,
-    LinearGradient,
-    alert_dialog,
-    RadialGradient,
     UserControl,
-    AlertDialog,
-    alignment,
     ElevatedButton,
-    BottomSheet,
-    Checkbox,
     colors,
     icons,
     Container
@@ -132,7 +119,7 @@ class MyApp(UserControl):
         return Column(
             width=600,
             controls=[
-                Row([Text(value="Add song ᕕ( ᐛ )ᕗ", style="titleLarge", font_family="Arial")], alignment="center"),
+                Row([Text(value="Add song", style="titleLarge", font_family="Arial")], alignment="center"),
                 Row(
                     controls=[
                         self.new_task,
