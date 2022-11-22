@@ -66,7 +66,7 @@ class Song(UserControl):
 
     def build(self):
         self.display_task = Text(value=name(search(self.task_name)),expand=True)
-        im = imagelink(search(self.task_name))
+        img = imagelink(search(self.task_name))
 
         self.display_view = Container(
             Row(
@@ -74,9 +74,9 @@ class Song(UserControl):
                 vertical_alignment="center",
                 controls=[
                     Image(
-                        src=f"{im}",
-                        width=100,
-                        height=100,
+                        src=f"{img}",
+                        width=50,
+                        height=50,
                         fit="contain",
                         border_radius=border_radius.all(10),
                     ),
@@ -102,6 +102,7 @@ class Song(UserControl):
         self.task_delete(self)
 
 
+
 class MyApp(UserControl):
     def build(self):
         self.new_task = TextField(
@@ -117,7 +118,7 @@ class MyApp(UserControl):
         self.items_left = Text("No song")       
 
         return Column(
-            width=600,
+            width=400,
             controls=[
                 Row([Text(value="Add song", style="titleLarge", font_family="Arial")], alignment="center"),
                 Row(
